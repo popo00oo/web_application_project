@@ -3,7 +3,9 @@
 I gave up the original plan because I could not find the list api of houses with prices.
 The management system for real estate developers can look at the crime rate and surrounding conditions in the area, and then manage the rental situation of the housing.
 Using map api to do some visualization of the data in the future front end part.
-  When I test I noticed it's only work on chrome,on firefox seemly not work very well. I have nor idea why. I will fix it in the future.
+
+When I test I noticed it's only work on chrome,on firefox seemly not work very well. I have nor idea why. I will fix it in the future.
+
 **Login directly by admin**<br>
 **User name: admin**<br>
 **Password:123456**
