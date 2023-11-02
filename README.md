@@ -1,23 +1,18 @@
 # web_application_project
 # 4012_web_project  link:https://github.com/popo00oo/4012_web_project
 I gave up the original plan because I could not find the list api of houses with prices.
-The management system for real estate developers can look at the crime rate and surrounding conditions in the area, and then manage the rental situation of the housing.
-Using map api to do some visualization of the data in the future front end part.
 
-When I test I noticed it's only work on chrome,on firefox seemly not work very well. I have nor idea why. I will fix it in the future.
+In terminal   **pip install -r requirements.txt**
+Then **python manage.py runserver**   
 
-**Login directly by admin**<br>
+
+**Login by admin**<br>
 **User name: admin**<br>
-**Password:123456**
+**Password:123**<br>
+Carleton Lost and found management system.
+The current site cannot add announcements, and the search function is not very good.
 
+User search from list  and publish a lost announcement for all the other users to see. And If found it, user can delate it. The other user can’t delate it.
 
-Or you can login in with the user or register one. So the user page and admin page will differnet.
-
-I use simpleUI to let backend system look better.
-Here is offical websit: https://newpanjing.github.io/simpleui_docs/en/
-
-Here is document about simpleUI:
-https://newpanjing.github.io/simpleui_docs/en/config.html
-
-And althogh wacth some tutorial video link:
-https://www.bilibili.com/video/BV1FP4y1M75C/?spm_id_from=333.337.search-card.all.click&vd_source=35244b1ee3cb13eda259a3b74221b8a8
+For the admin, can add or delate the lost thing into the list.
+And also can delate or post some announcements.
