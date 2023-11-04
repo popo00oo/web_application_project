@@ -71,8 +71,7 @@
         {% if messages %}
             <div class="messages">
                 {% for message in messages %}
-                  <!--  <div{% if message.tags %} class="message {{ message.tags }}"{% endif %}> -->
-                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+                 <div{% if message.tags %} class="message {{ message.tags }}"{% endif %}>
                         {{ message }}
                     </div>
                 {% endfor %}
@@ -99,6 +98,9 @@
 
 
     <div class="container">
+
+
+
         <h2>Register</h2>
         <form action="http://127.0.0.1:8000/register/" method="post">
             <input type="text" name="username" placeholder="Username" required><br>
@@ -112,16 +114,16 @@
 
 
 <script>
-        // Wait for the DOM to load
+        // Wait for loading
         document.addEventListener('DOMContentLoaded', function() {
-            // Find all elements with class 'alert' within 'messages'
-            var messages = document.querySelectorAll('.messages .alert');
+            // Find all messages
+            var messages = document.querySelectorAll('.messages ');
             setTimeout(function() {
                 // Hide each message
                 messages.forEach(function(message) {
                     message.style.display = 'none';
                 });
-            }, 2000); // 5000 milliseconds = 2 seconds
+            }, 2000); // 2 seconds
         });
     </script>
 </body>

@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,  redirect
 from django.views.decorators.csrf import csrf_exempt
-
 from lost.models import User, Lost, Notice
-
 from django.contrib import messages
+from django.urls import reverse
+
 # Create your views here.
 from django.http import HttpResponseRedirect
 
@@ -11,22 +11,29 @@ from django.http import HttpResponseRedirect
 # User registration
 @csrf_exempt
 def register(request):
-    if request.method == 'POST':
-        return render(request, 'login.html')
+    if request.method == 'GET':
+        #return render(request, 'login.html')
+        # Ensure No Resubmission so use redirect
+        return redirect('login')
+
     else:
         username = request.POST.get('username')
         password = request.POST.get('password')
         # is it user already have
         if User.objects.filter(username=username).exists():
+
            # print('Username already exists')
-          #  return render(request, 'login.html', {'error': 'Username already exists'})
           messages.error(request, 'Username already exists')
-          return HttpResponseRedirect(request.path_info)  # Stay on the same page
+          #return render(request, 'login.html', {'error': 'Username already exists'})
+          #Ensure No Resubmission so use redirect
+          return redirect('register')
+
         else:
-            #User.objects.create(username=username, password=password)
-            #return render(request, 'login.html')
+            User.objects.create(username=username, password=password)
             messages.success(request, 'Your account has been created! You are now able to log in.')
-            return HttpResponseRedirect(request.path_info)  # Or redirect as needed
+            #return render(request, 'login.html', {'error': 'Username already exists'})
+            return redirect('register')
+
 
 
 
@@ -35,6 +42,8 @@ def register(request):
 def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
+
+
     else:
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -48,14 +57,21 @@ def login(request):
                 # Get all lost items
                 losts = Lost.objects.all()
                 return render(request, 'index.html',{"userid":userid,"notices":notices,"losts":losts})
+
             else:
                 #print('wrong password')
                 messages.error(request, 'Wrong password')
-                return render(request, 'login.html', {'error': 'wrong password'})
+                #return render(request, 'login.html', {'error': 'wrong password'})
+                return redirect('login')
+
+
         else:
             #print('Username does not exist')
             messages.error(request, 'Username does not exist')
-            return render(request, 'login.html', {'error': 'Username does not exist'})
+            #return render(request, 'login.html', {'error': 'Username does not exist'})
+            return redirect('login')
+
+
 
 
 # Issue an announcement
@@ -122,6 +138,5 @@ def search(request):
         # Search by Location，Category，UPass，Description contains content of lost property
         losts = Lost.objects.filter(Location__contains=content) | Lost.objects.filter(Category__contains=content) | Lost.objects.filter(UPass__contains=content) | Lost.objects.filter(Description__contains=content)
         return render(request, 'index.html', {'losts': losts, "notices": notices})
-
 
 
