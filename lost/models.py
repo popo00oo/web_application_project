@@ -30,6 +30,6 @@ class Lost(models.Model):
 class Notice(models.Model):
     Content = models.CharField(max_length=200)
     userid = models.CharField(max_length=20)
-    #userid = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
 
 
