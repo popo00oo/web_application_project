@@ -76,7 +76,9 @@ def notice(request):
         # Get all Announcements
         notices = Notice.objects.all()
         losts = Lost.objects.all()
-        return render(request, 'index.html',{"notices": notices, "losts": losts})
+        userid = request.POST.get('userid')
+
+        return render(request, 'index.html',{"userid":userid,"notices": notices, "losts": losts})
 
     else:
         content = request.POST.get('content')
@@ -103,7 +105,7 @@ def delnotice(request):
     losts = Lost.objects.all()
     # is Announcements not posted by the user himself
     if Notice.objects.filter(id=id):
-        if Notice.objects.filter(userid=userid):
+        if Notice.objects.filter(id=id, userid=userid):
             Notice.objects.filter(id=id).delete()
             # Get all Announcements
             notices = Notice.objects.all()
@@ -117,22 +119,24 @@ def delnotice(request):
             # Get all lost items
             losts = Lost.objects.all()
             return render(request, 'index.html', {"userid":userid,"notices": notices, "losts": losts})
-    return render(request, 'index.html', {"userid":userid,"notices": notices, "losts": losts})
+    return render(request, 'index.html', {"notices": notices, "losts": losts})
 
 
 # Search for lost
 def search(request):
     if request.method == 'GET':
+        userid = request.POST.get('userid')
 
         notices = Notice.objects.all()
 
         losts = Lost.objects.all()
-        return render(request, 'index.html', {"notices": notices, "losts": losts})
+        return render(request, 'index.html', {"userid":userid,"notices": notices, "losts": losts})
     else:
 
         notices = Notice.objects.all()
 
         content = request.POST.get('content')
+        userid = request.POST.get('userid')
         # Search by Location，Category，UPass，Description contains content of lost property
         losts = Lost.objects.filter(Location__contains=content) | Lost.objects.filter(Category__contains=content) | Lost.objects.filter(UPass__contains=content) | Lost.objects.filter(Description__contains=content)
-        return render(request, 'index.html', {'losts': losts, "notices": notices})
+        return render(request, 'index.html', {"userid":userid,'losts': losts, "notices": notices})

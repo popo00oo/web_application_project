@@ -85,9 +85,11 @@
         <form action="http://127.0.0.1:8000/search/" method="post">
              {% csrf_token %}
             <input type="text" name="content" placeholder="Search...">
+            <input type="hidden" name="userid" value="{{ userid }}">
             <input type="submit" value="Search">
         </form>
     </div>
+
 
     <div class="container">
         <h2>Item list</h2>
