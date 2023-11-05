@@ -52,6 +52,7 @@
     <div class="container">
         <h2>Announce</h2>
         <form action="http://127.0.0.1:8000/notice/" method="post">
+            {% csrf_token %}
             <input type="text" name="content" placeholder="content" required><br>
             <input type="hidden" name="userid" value="{{ userid }}">
             <input type="submit" value="Send">
@@ -68,7 +69,11 @@
             {% for i in notices %}
             <tr>
                 <td>{{ i.Content }}</td>
-                <td><a href="http://127.0.0.1:8000/delnotice/?id={{ i.id }}&userid={{ userid }}">Delete</a></td>
+               <td>
+
+                   <a href="http://127.0.0.1:8000/delnotice/?id={{ i.id }}&userid={{ userid }}">Delete</a>
+
+               </td>
             </tr>
             {% endfor %}
             <!-- Use server-side code to dynamically generate a list of announcements -->
@@ -78,6 +83,7 @@
     <div class="container">
         <h2>Search</h2>
         <form action="http://127.0.0.1:8000/search/" method="post">
+             {% csrf_token %}
             <input type="text" name="content" placeholder="Search...">
             <input type="submit" value="Search">
         </form>
