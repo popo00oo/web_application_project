@@ -9,6 +9,8 @@ Then **python manage.py runserver**
 **Login by admin**<br>
 **User name: admin**<br>
 **Password:123**<br>
+The username and password current created. username and password are same. But in database show the hash password.
+
 Carleton Lost and found management system.
 The current site cannot add announcements, and the search function is not very good.
 
