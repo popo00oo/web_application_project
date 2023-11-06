@@ -4,8 +4,7 @@ from lost.models import User, Lost, Notice
 from django.contrib import messages
 from lost.forms import RegisterForm,LoginForm
 from django.contrib.auth.hashers import make_password,check_password
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate, login
+
 
 
 # Create your views here.
@@ -24,18 +23,16 @@ def register(request):
         else:
             # The form will contain the validation error
             messages.error(request, 'Username already exists')
-            #return render(request, 'login.html', {'form': form})
+
             return redirect('login')
 
     else:
         form = RegisterForm()
-    #return render(request, 'register.html', {'form': form})
     return redirect('register')
 
 
 
-'''
-'''
+
 
 #User login
 def login(request):
@@ -66,8 +63,7 @@ def login(request):
         return render(request, 'login.html')
 
 
-'''
-'''
+
 
 
 # Issue an announcement
