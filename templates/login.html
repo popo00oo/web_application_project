@@ -112,41 +112,6 @@
 
 
 
-    <div class="container">
-        <h2>Search</h2>
-        <form action="http://127.0.0.1:8000/search/" method="post">
-             {% csrf_token %}
-            <input type="text" name="content" placeholder="Search...">
-            <input type="submit" value="Search">
-        </form>
-    </div>
-
-
-    <div class="container">
-        <h2>Item list</h2>
-        <table>
-            <tr>
-                <th>Location</th>
-                <th>Date</th>
-                <th>Category</th>
-                <th>UPass</th>
-                <th>Description</th>
-            </tr>
-            {% for j in losts %}
-            <tr>
-                <td>{{ j.Location }}</td>
-                <td>{{ j.Date }}</td>
-                <td>{{ j.Category }}</td>
-                <td>{{ j.UPass }}</td>
-                <td>{{ j.Description }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-    </div>
-
-
-
-
 
 <script>
         // Wait for loading

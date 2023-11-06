@@ -7,16 +7,15 @@ from django.contrib.auth.hashers import make_password
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    # Your code for the admin display list, search fields, etc.
+
 
     def save_model(self, request, obj, form, change):
-        # Only hash the password if it's a new object or if the password has been changed
+        # Hash the password will use when create a new object
         if not change or 'password' in form.changed_data:
             obj.password = make_password(obj.password)
         super().save_model(request, obj, form, change)
 
 
-# The other models can just be registered normally if you don't need custom admin logic
 
 admin.site.register(Lost)
 admin.site.register(Notice)

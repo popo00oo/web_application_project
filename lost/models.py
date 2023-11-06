@@ -1,18 +1,21 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin,BaseUserManager
+
 from django.conf import settings
 
 
 # Create your models here.
 
+
+
 # User table
-
-
 class User(models.Model):
 
     username = models.CharField(max_length=20)
 
     password = models.CharField(max_length=128)
+
+
 
 
 # List of lost property
@@ -26,7 +29,6 @@ class Lost(models.Model):
 
 
 # Announcement list
-
 class Notice(models.Model):
     Content = models.CharField(max_length=200)
     userid = models.CharField(max_length=20)

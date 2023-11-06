@@ -1,5 +1,5 @@
 # web_application_project
-# 4012_web_project  link:https://github.com/popo00oo/4012_web_project
+# 4012_web_project  link:https://github.com/popo00oo/web_application_project/tree/master
 I gave up the original plan because I could not find the list api of houses with prices.
 
 In terminal   **pip install -r requirements.txt**
