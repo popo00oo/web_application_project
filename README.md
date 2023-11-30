@@ -13,8 +13,8 @@ My back end has changed a lot, making sure the front and back ends are separated
 
 
 **Frontend**
-In terminal  **npm install** and **npm run start** 
-Loading indicators exist for tasks.
+In terminal  **npm install** and **npm run start** <br>
+Loading indicators exist for tasks. <br>
 Rest button for the search table result.
 
 **Deploy front-end**<br>
