@@ -1,7 +1,7 @@
 from rest_framework.throttling import SimpleRateThrottle
 
 
-# 匿名用户
+# normal user
 class AnonymousThrottle(SimpleRateThrottle):
     scope = 'AnonymousUser'
 
@@ -9,7 +9,7 @@ class AnonymousThrottle(SimpleRateThrottle):
         return self.get_ident(request)
 
 
-# 超级用户
+# Super user
 class SuperThrottle(SimpleRateThrottle):
     scope = 'super_user'
 

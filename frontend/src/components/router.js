@@ -1,12 +1,11 @@
 import { lazy } from 'react'  // Load hook
 import { Suspense } from 'react'
-// 全局loading组件
 import Loading from 'components/loading'
 
 
 const lazyLoad = component => <Suspense fallback={<Loading />}>{component}</Suspense >
 
-// 全局组件导入
+// components import
 const Layout = lazy(() => import('components/template'))
 const Home = lazy(() => import('components/pages/home'))
 const Login = lazy(() => import('components/pages/login'))

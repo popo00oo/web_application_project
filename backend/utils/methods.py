@@ -22,11 +22,11 @@ def get_data(model=None, is_query: bool = False, request=None, view=None, serCla
 
 def return_response(status: bool = True, code: int = 200, data=None, info: str = '', error: str = ''):
     response = {
-        'status': status,  # 请求状态
-        'code': code,  # 请求标志 - 200/400
-        'data': data,  # 请求内容 - dict
-        'info': info,  # 提示信息 - str
-        'errs': error  # 错误信息 - str
+        'status': status,  # request ststus
+        'code': code,  # sign- 200/400
+        'data': data,  # dict
+        'info': info,  #
+        'errs': error  #
     }
     return response
 

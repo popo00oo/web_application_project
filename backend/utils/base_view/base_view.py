@@ -16,6 +16,7 @@ class BaseView(APIView):
             return JsonResponse(response)
         queryset = self.model
         is_query = False
+        #Search
         if self.get_filter:
             queryset = self.model.objects.filter(**request.query_params.dict()).all()
             is_query = True

@@ -3,13 +3,13 @@ from users.models import Users
 
 
 class Lost(models.Model):
-    location = models.CharField(max_length=20, verbose_name='丢失位置')
-    date = models.CharField(max_length=20, verbose_name='丢失时间')
-    category = models.CharField(max_length=20, verbose_name='物品分类')
+    location = models.CharField(max_length=20, verbose_name='lost location')
+    date = models.CharField(max_length=20, verbose_name='lost time')
+    category = models.CharField(max_length=20, verbose_name='category')
     # optional enter
     upass = models.CharField(max_length=20, null=True)
-    desc = models.CharField(max_length=200, verbose_name='描述')
-    status = models.BooleanField(default=True, verbose_name='有效状态')
+    desc = models.CharField(max_length=200, verbose_name='description')
+    status = models.BooleanField(default=True, verbose_name='status')
     create_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
 

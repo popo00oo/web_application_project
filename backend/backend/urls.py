@@ -4,6 +4,10 @@ from django.urls import path
 from users.views import LoginView, RegisterView
 from service.views import NoticeView, LostListView
 
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('', lambda request: HttpResponse('hello word!')),
     path('admin/', admin.site.urls),
@@ -12,3 +16,4 @@ urlpatterns = [
     path('service/notice', NoticeView.as_view()),
     path('service/lost', LostListView.as_view())
 ]
+
