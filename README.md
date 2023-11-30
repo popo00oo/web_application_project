@@ -15,4 +15,4 @@ In terminal  **npm install** and **npm run start**
 **Deployment front-end**<br>
 Keep running the frontend and backend termianl <br>
 in the frontend open a new terminal window, run **.\ngrok.exe http 8000**
-Then get the link from Forwarding like https://xxxx-xxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx.ngrok-free.app/
+Then get the link from Forwarding like https://xxxx-xxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx.ngrok-free.app/ Click it and run,you can also open on the phone with this link
