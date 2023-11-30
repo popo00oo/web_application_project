@@ -13,5 +13,5 @@ I still want to keep the client user, admin uses django's absuser way, and is se
 In terminal  **npm install** and **npm run start** 
 
 **Deployment front-end**
-Keep running the frontend and backend termianl, 
+Keep running the frontend and backend termianl, <br>
 in the frontend open a new terminal window, run **.\ngrok.exe http 8000**
