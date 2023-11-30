@@ -1,15 +1,16 @@
 # web_application_project
-4012 project
+**Backend**
+In terminal   **pip install -r requirements.txt**
+Then **python manage.py runserver**   
 
-I gave up the original plan because I could not find the list api of houses with prices.
 
-In terminal pip install -r requirements.txt Then python manage.py runserver
+**Login by admin**<br>
+**User name: admin**<br>
+**Password:admin123**<br>
+I still want to keep the client user, admin uses django's absuser way, and is separating them. So i use JWT authentication. And I also use throttle to protect back-end services
 
-Login by admin
-User name: admin
-Password:123
-Carleton Lost and found management system. The current site cannot add announcements, and the search function is not very good.
+**Frontend**
+In terminal  **npm install** and **npm run start** 
 
-User search from list and publish a lost announcement for all the other users to see. And If found it, user can delate it. The other user can’t delate it.
-
-For the admin, can add or delate the lost thing into the list. And also can delate or post some announcements.
+**Deployment front-end**
+Keep running the frontend and backend termianl, in the frontend open a new terminal window, run **.\ngrok.exe http 8000**
