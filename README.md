@@ -12,7 +12,7 @@ I still want to keep the client user, admin uses django's absuser way, and is se
 **Frontend**
 In terminal  **npm install** and **npm run start** 
 
-**Deployment front-end**<br>
+**Deploy front-end**<br>
 Keep running the frontend and backend termianl <br>
 in the frontend open a new terminal window, run **.\ngrok.exe http 3000**,Maybe not 3000,it's depend on your frontend localhost
 Then get the link from Forwarding like https://xxxx-xxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx.ngrok-free.app/ Click it and run,you can also open on the phone with this link
