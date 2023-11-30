@@ -1,0 +1,31 @@
+.topNav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.a:hover {
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+  color: red;
+}
+
+.a,
+.user {
+  width: 5rem;
+  text-align: center;
+}
+
+.user {
+  margin-left: auto;
+}

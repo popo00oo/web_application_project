@@ -1,0 +1,41 @@
+.row {
+  width: 60%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #999;
+}
+
+.title {
+  background-color: #999;
+}
+
+.content {
+  width: 40%;
+}
+
+.content {
+  text-align: left;
+}
+
+.timer {
+  text-align: center;
+}
+
+.delBtn {
+  padding: 5px 15px;
+  outline: none;
+  border: none;
+  color: #ff0000;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.disabled {
+  background-color: #999;
+  color: #fff;
+  box-shadow: none;
+}

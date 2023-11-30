@@ -1,0 +1,28 @@
+.box {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #87ceeb;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: #87ceeb;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}

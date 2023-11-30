@@ -1,0 +1,40 @@
+.box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/bg.png") no-repeat center top;
+  background-size: 20%;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, .1);
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  padding: 1rem;
+}
+
+.inputText {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  background-color: inherit;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+}
