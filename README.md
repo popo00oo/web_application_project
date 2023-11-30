@@ -8,7 +8,9 @@ Then **python manage.py runserver**
 **Login by admin**<br>
 **User name: admin**<br>
 **Password:admin123**<br>
-I still want to keep the client user, admin uses django's absuser way, and is separating them. So i use JWT authentication. And I also use throttle to protect back-end services
+I still want to keep the client user, admin uses django's absuser way, and is separating them. So i use JWT authentication. And I also use throttle to protect back-end services.
+My back end has changed a lot, making sure the front and back ends are separated.
+
 
 **Frontend**
 In terminal  **npm install** and **npm run start** 
