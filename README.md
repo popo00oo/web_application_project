@@ -14,6 +14,8 @@ My back end has changed a lot, making sure the front and back ends are separated
 
 **Frontend**
 In terminal  **npm install** and **npm run start** 
+Loading indicators exist for tasks.
+Rest button for the search table result.
 
 **Deploy front-end**<br>
 Keep running the frontend and backend termianl <br>
